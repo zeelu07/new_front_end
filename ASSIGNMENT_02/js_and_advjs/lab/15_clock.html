@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+</head>
+<body>
+
+   
+    <h1 id="clock"></h1>
+
+    <script>
+        // Function to update clock every second
+        function updateClock() {
+            let now = new Date();  // Get current time
+            let time = now.toLocaleTimeString(); // Format time
+            document.getElementById("clock").textContent = time;
+        }
+
+        // Call updateClock every 1000ms (1 second)
+        setInterval(updateClock, 1000);
+
+        // Run once immediately
+        updateClock();
+    </script>
+
+</body>
+</html>
